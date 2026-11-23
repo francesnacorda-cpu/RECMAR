@@ -1,7 +1,5 @@
-RECMAR_AI/
-│
-├── app.py
-├── requirements.txt
-│
-└── .streamlit/
-    └── secrets.toml
+
+streamlit>=1.52.0
+openai>=2.0.0
+pypdf>=5.0.0
+python-docx>=1.1.2
