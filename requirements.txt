@@ -1,2 +1,7 @@
-streamlit
-openai
+RECMAR_AI/
+│
+├── app.py
+├── requirements.txt
+│
+└── .streamlit/
+    └── secrets.toml
