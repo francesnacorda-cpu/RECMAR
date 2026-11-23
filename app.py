@@ -264,16 +264,10 @@ if user_input:
                     "content": answer
                 })
 
-            except Exception as error:
-
-                st.error(
-                    "Oops! RECMAR encountered a problem."
-                )
-
-                st.caption(
-                    "Check your API key, internet connection, "
-                    "and API access."
-                )
+except Exception as e:
+    st.error("RECMAR encountered this error:")
+    st.code(f"{type(e).__name__}: {e}")
+    print(f"RECMAR API ERROR: {type(e).__name__}: {e}")
 
                 st.session_state.messages.pop()
 
