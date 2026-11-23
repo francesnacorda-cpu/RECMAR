@@ -219,12 +219,11 @@ def get_ai_response(messages, selected_mode):
 
     client = OpenAI(api_key=api_key)
 
-    response = client.responses.create(
+    response = client.chat.completions.create(
         model="gpt-5.5",
-        instructions=get_instructions(selected_mode),
-        input=messages[-30:],
-        max_output_tokens=2000,
-        store=False
+        messages=[
+            {"role": "user", "content": "Hello!"}    
+        ]
     )
 
     return response.output_text
