@@ -215,7 +215,7 @@ for message in st.session_state.messages:
 
 def get_ai_response(messages, selected_mode):
 
-    api_key = st.secrets["OPENAI_API_KEY"]
+    api_key = st.secrets["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"]
 
     client = OpenAI(api_key=api_key)
 
